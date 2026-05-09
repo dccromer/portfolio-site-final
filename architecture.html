@@ -1,43 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Architecture | Diamone Cromer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture — Diamone Cromer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── PAGE HEADER ── */
+    .page-header {
+      padding: 80px 56px 64px;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: end;
+    }
+    .page-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 16px;
+    }
+    .page-title {
+      font-family: var(--serif);
+      font-size: clamp(48px, 5vw, 72px);
+      font-weight: 300;
+      line-height: 1.0;
+      color: var(--ink);
+    }
+    .page-title em { font-style: italic; color: var(--rose); }
+    .page-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 380px;
+      align-self: end;
+    }
+
+    /* ── PROJECT CARD GRID ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--border);
+    }
+
+    .project-card {
+      padding: 52px 56px;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .project-card:nth-child(even) { border-right: none; }
+    .project-card:hover { background: var(--rose-bg); }
+
+    .card-num {
+      font-family: var(--serif);
+      font-size: 13px;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /* ── IMAGE PLACEHOLDER ── */
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--rose-bg);
+      border: 1px solid rgba(196,120,154,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-img-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rose);
+      opacity: 0.6;
+    }
+    /* dashed border hint */
+    .card-img::before {
+      content: '';
+      position: absolute;
+      inset: 12px;
+      border: 1.5px dashed rgba(196,120,154,0.3);
+      border-radius: 2px;
+    }
+
+    .card-title {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+    .card-title em { font-style: italic; font-weight: 600; color: var(--rose); }
+
+    .card-desc {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-year {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    .card-link {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rose);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .project-card:hover .card-link { opacity: 1; }
+  </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="logo">Diamone <em>Cromer</em></a>
-        <ul class="nav-links">
-            <li><a href="architecture.html" class="active">Architecture</a></li>
-            <li><a href="data.html">Data</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
-    <section id="work">
-        <div class="works-header" style="background: var(--rose-bg);">
-            <div class="col-h" style="color: var(--rose);">#</div>
-            <div class="col-h" style="color: var(--rose);">Project</div>
-            <div class="col-h" style="color: var(--rose);">Disciplines</div>
-            <div class="col-h" style="color: var(--rose);">Year</div>
-        </div>
+  <!-- NAV -->
+  <nav>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit">Diamone <em>Cromer</em></a></div>
+    <ul class="nav-links">
+      <li><a href="architecture.html" style="color:var(--ink)">Architecture</a></li>
+      <li><a href="data.html">Data</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-        <div class="work-row">
-            <div class="row-num">01</div>
-            <div>
-                <div class="row-title">The <em>Living Tower</em></div>
-                <div class="row-desc">Sustainable urban high-rise design.</div>
-            </div>
-            <div class="chips">
-                <span class="chip chip-rose">Rhino</span>
-                <span class="chip chip-neu">Architecture</span>
-            </div>
-            <div class="row-right"><span class="row-year">2024</span></div>
-        </div>
-    </section>
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div>
+      <div class="page-eyebrow">Discipline — 01</div>
+      <h1 class="page-title">Archi<em>tecture</em></h1>
+    </div>
+    <p class="page-desc">
+      <!-- Replace with a sentence about your architecture work and approach -->
+      [A short line about your architectural practice — what you design, how you think spatially, and what draws you to the built environment.]
+    </p>
+  </div>
 
-    <footer><span>© 2026 Diamone Cromer</span></footer>
+  <!-- PROJECTS GRID -->
+  <div class="projects-grid">
+
+    <!-- PROJECT 01 — replace all placeholder text -->
+    <div class="project-card">
+      <div class="card-num">01 —</div>
+      <div class="card-img">
+        <span class="card-img-label">Add project image</span>
+        <!-- Replace this div with: <img src="images/your-image.jpg" alt="Project name" style="width:100%;height:100%;object-fit:cover"> -->
+      </div>
+      <div class="card-title">Project <em>Name Here</em></div>
+      <div class="card-desc">
+        [One or two sentences describing this project — what it is, what problem it solves, or what idea it explores.]
+      </div>
+      <div class="chips" style="margin-bottom:20px">
+        <span class="chip chip-rose">Type of work</span>
+        <span class="chip chip-neu">Material / Method</span>
+      </div>
+      <div class="card-footer">
+        <span class="card-year">Year</span>
+        <span class="card-link">View project →</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 02 -->
+    <div class="project-card">
+      <div class="card-num">02 —</div>
+      <div class="card-img">
+        <span class="card-img-label">Add project image</span>
+      </div>
+      <div class="card-title">Project <em>Name Here</em></div>
+      <div class="card-desc">
+        [One or two sentences describing this project.]
+      </div>
+      <div class="chips" style="margin-bottom:20px">
+        <span class="chip chip-rose">Type of work</span>
+        <span class="chip chip-neu">Material / Method</span>
+      </div>
+      <div class="card-footer">
+        <span class="card-year">Year</span>
+        <span class="card-link">View project →</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 03 -->
+    <div class="project-card">
+      <div class="card-num">03 —</div>
+      <div class="card-img">
+        <span class="card-img-label">Add project image</span>
+      </div>
+      <div class="card-title">Project <em>Name Here</em></div>
+      <div class="card-desc">
+        [One or two sentences describing this project.]
+      </div>
+      <div class="chips" style="margin-bottom:20px">
+        <span class="chip chip-neu">Type of work</span>
+        <span class="chip chip-lav">Material / Method</span>
+      </div>
+      <div class="card-footer">
+        <span class="card-year">Year</span>
+        <span class="card-link">View project →</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 04 — delete this block if you don't need it yet -->
+    <div class="project-card">
+      <div class="card-num">04 —</div>
+      <div class="card-img">
+        <span class="card-img-label">Add project image</span>
+      </div>
+      <div class="card-title">Project <em>Name Here</em></div>
+      <div class="card-desc">
+        [One or two sentences describing this project.]
+      </div>
+      <div class="chips" style="margin-bottom:20px">
+        <span class="chip chip-rose">Type of work</span>
+        <span class="chip chip-neu">Material / Method</span>
+      </div>
+      <div class="card-footer">
+        <span class="card-year">Year</span>
+        <span class="card-link">View project →</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 Diamone Cromer — Syracuse, NY</span>
+    <span>Data × Architecture × Design</span>
+  </footer>
+
 </body>
 </html>
