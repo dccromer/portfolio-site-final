@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Diamone Cromer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 80vh;
+    }
+
+    .contact-l {
+      padding: 80px 56px;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .page-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 16px;
+    }
+
+    .page-title {
+      font-family: var(--serif);
+      font-size: clamp(48px, 5vw, 72px);
+      font-weight: 300;
+      line-height: 1.0;
+      color: var(--white);
+      margin-bottom: 28px;
+    }
+    .page-title em { font-style: italic; color: var(--rose); }
+
+    .contact-tagline {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(253,248,246,0.55);
+      max-width: 360px;
+      line-height: 1.6;
+      margin-bottom: 52px;
+    }
+
+    .contact-links { display: flex; flex-direction: column; gap: 20px; }
+
+    .contact-link-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      text-decoration: none;
+      transition: padding-left 0.2s;
+    }
+    .contact-link-item:hover { padding-left: 8px; }
+
+    .link-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(253,248,246,0.35);
+      margin-bottom: 4px;
+    }
+
+    .link-value {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--white);
+    }
+
+    .link-arrow { font-size: 18px; color: var(--rose); }
+
+    /* Right panel — availability info */
+    .contact-r {
+      padding: 80px 56px;
+      background: var(--rose-bg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .avail-label {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 28px;
+    }
+
+    .avail-status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #6bcb77;
+      flex-shrink: 0;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .status-text {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--ink);
+    }
+
+    .avail-details {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 48px;
+      max-width: 320px;
+    }
+
+    .avail-types { display: flex; flex-direction: column; gap: 12px; }
+
+    .avail-type {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--ink);
+    }
+
+    .avail-type::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--rose);
+      flex-shrink: 0;
+    }
+
+    .contact-r-bottom {
+      padding-top: 48px;
+      border-top: 1px solid rgba(196,120,154,0.2);
+    }
+
+    .location-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .location-value {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit">Diamone <em>Cromer</em></a></div>
+    <ul class="nav-links">
+      <li><a href="architecture.html">Architecture</a></li>
+      <li><a href="data.html">Data</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" style="color:var(--white);background:var(--ink);padding:6px 14px;border-radius:2px">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="contact-hero">
+
+    <!-- LEFT — dark panel with contact links -->
+    <div class="contact-l">
+      <div>
+        <div class="page-eyebrow">Get In Touch</div>
+        <h1 class="page-title">Let's <em>talk.</em></h1>
+        <p class="contact-tagline">
+          [A warm one-liner inviting people to reach out — keep it friendly and direct.]
+        </p>
+      </div>
+
+      <div class="contact-links">
+
+        <!-- EMAIL — replace with your real email -->
+        <a class="contact-link-item" href="mailto:your@email.com">
+          <div>
+            <div class="link-label">Email</div>
+            <div class="link-value">your@email.com</div>
+          </div>
+          <span class="link-arrow">↗</span>
+        </a>
+
+        <!-- LINKEDIN — replace with your real URL -->
+        <a class="contact-link-item" href="https://linkedin.com/in/yourhandle" target="_blank">
+          <div>
+            <div class="link-label">LinkedIn</div>
+            <div class="link-value">linkedin.com/in/yourhandle</div>
+          </div>
+          <span class="link-arrow">↗</span>
+        </a>
+
+        <!-- GITHUB — replace with your real URL -->
+        <a class="contact-link-item" href="https://github.com/dccromer" target="_blank">
+          <div>
+            <div class="link-label">GitHub</div>
+            <div class="link-value">github.com/dccromer</div>
+          </div>
+          <span class="link-arrow">↗</span>
+        </a>
+
+        <!-- Add more links here (Instagram, Behance, etc.) if relevant -->
+
+      </div>
+    </div>
+
+    <!-- RIGHT — availability info -->
+    <div class="contact-r">
+      <div>
+        <div class="avail-label">Current Status</div>
+        <div class="avail-status">
+          <div class="status-dot"></div>
+          <div class="status-text">Available for opportunities</div>
+        </div>
+        <p class="avail-details">
+          <!-- Update this when your availability changes -->
+          Currently open to internships, part-time roles, and collaborations for Summer 2026 and beyond.
+        </p>
+
+        <div class="avail-types">
+          <!-- Edit these to match what you're actually looking for -->
+          <div class="avail-type">Architecture internship</div>
+          <div class="avail-type">Data analytics role</div>
+          <div class="avail-type">Research collaboration</div>
+          <div class="avail-type">Freelance / project work</div>
+        </div>
+      </div>
+
+      <div class="contact-r-bottom">
+        <div class="location-label">Based in</div>
+        <div class="location-value">Syracuse, NY — open to remote &amp; relocation</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>© 2026 Diamone Cromer — Syracuse, NY</span>
+    <span>Data × Architecture × Design</span>
+  </footer>
+
+</body>
+</html>
