@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Diamone Cromer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .about-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 60vh;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-hero-l {
+      padding: 80px 56px;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .page-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 16px;
+    }
+
+    .page-title {
+      font-family: var(--serif);
+      font-size: clamp(48px, 5vw, 72px);
+      font-weight: 300;
+      line-height: 1.0;
+      color: var(--ink);
+      margin-bottom: 32px;
+    }
+    .page-title em { font-style: italic; color: var(--rose); }
+
+    .about-bio {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--ink);
+      max-width: 480px;
+      margin-bottom: 40px;
+    }
+    .about-bio em { font-style: italic; color: var(--rose); }
+
+    .about-bio-small {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 480px;
+    }
+
+    /* Photo placeholder */
+    .about-hero-r {
+      background: var(--rose-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo-placeholder {
+      width: 220px;
+      height: 280px;
+      border: 1.5px dashed rgba(196,120,154,0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .photo-placeholder-icon {
+      font-size: 32px;
+      opacity: 0.3;
+    }
+
+    .photo-placeholder-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rose);
+      opacity: 0.5;
+      text-align: center;
+    }
+
+    /* Skills & details */
+    .about-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .detail-col {
+      padding: 52px 56px;
+      border-right: 1px solid var(--border);
+    }
+    .detail-col:last-child { border-right: none; }
+
+    .detail-label {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--lav);
+      margin-bottom: 28px;
+    }
+
+    .exp-item { margin-bottom: 24px; }
+    .exp-title {
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 2px;
+      color: var(--ink);
+    }
+    .exp-where { font-size: 12px; color: var(--muted); }
+    .exp-when  { font-size: 11px; color: rgba(42,32,48,0.35); margin-top: 2px; }
+
+    /* Skills list */
+    .skills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .skill-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--ink);
+    }
+    .skill-row:last-child { border-bottom: none; }
+    .skill-tag {
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit">Diamone <em>Cromer</em></a></div>
+    <ul class="nav-links">
+      <li><a href="architecture.html">Architecture</a></li>
+      <li><a href="data.html">Data</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="about.html" style="color:var(--ink)">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="about-hero">
+    <div class="about-hero-l">
+      <div>
+        <div class="page-eyebrow">About Me</div>
+        <h1 class="page-title">Diamone<br><em>Cromer</em></h1>
+
+        <!-- Replace with your real bio -->
+        <p class="about-bio">
+          [Your main bio — 2 sentences. Make it personal and specific. Who are you, what do you care about, what makes you unusual?]
+        </p>
+
+        <p class="about-bio-small">
+          [Optional second paragraph — a bit more detail about your background, where you grew up, what pulled you toward both data and architecture, or what you're working toward. Keep it human.]
+        </p>
+      </div>
+
+      <div class="hero-stats" style="margin-top:48px;padding-top:40px">
+        <div>
+          <div class="stat-num">3<sup>+</sup></div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div>
+          <div class="stat-num">2<sup>×</sup></div>
+          <div class="stat-label">Disciplines</div>
+        </div>
+        <div>
+          <div class="stat-num">'<sup style="color:var(--lav)">26</sup></div>
+          <div class="stat-label">Graduate</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Replace this block with your actual photo -->
+    <div class="about-hero-r">
+      <div class="photo-placeholder">
+        <div class="photo-placeholder-icon">◻</div>
+        <div class="photo-placeholder-label">Add your photo here<br>
+          <!-- To add photo: replace this whole .photo-placeholder div with -->
+          <!-- <img src="images/diamone.jpg" alt="Diamone Cromer" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DETAILS -->
+  <div class="about-details">
+
+    <!-- EXPERIENCE -->
+    <div class="detail-col">
+      <div class="detail-label">Experience</div>
+      <div class="exp-item">
+        <div class="exp-title">Role Title</div>
+        <div class="exp-where">Organization Name</div>
+        <div class="exp-when">2025 — Present</div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-title">Role Title</div>
+        <div class="exp-where">Organization Name</div>
+        <div class="exp-when">2024 — 2025</div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-title">Role Title</div>
+        <div class="exp-where">Organization Name</div>
+        <div class="exp-when">2023</div>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="detail-col">
+      <div class="detail-label">Education</div>
+      <div class="exp-item">
+        <div class="exp-title">Degree / Program</div>
+        <div class="exp-where">Syracuse University</div>
+        <div class="exp-when">2023 — 2026</div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-title">School Name</div>
+        <div class="exp-where">New York, NY</div>
+        <div class="exp-when">2020 — 2023</div>
+      </div>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="detail-col">
+      <div class="detail-label">Skills &amp; Tools</div>
+      <div class="skills-list">
+        <!-- Add or remove skill rows as needed -->
+        <div class="skill-row">
+          <span>[Skill or tool]</span>
+          <span class="skill-tag">Architecture</span>
+        </div>
+        <div class="skill-row">
+          <span>[Skill or tool]</span>
+          <span class="skill-tag">Data</span>
+        </div>
+        <div class="skill-row">
+          <span>[Skill or tool]</span>
+          <span class="skill-tag">Design</span>
+        </div>
+        <div class="skill-row">
+          <span>[Skill or tool]</span>
+          <span class="skill-tag">Data</span>
+        </div>
+        <div class="skill-row">
+          <span>[Skill or tool]</span>
+          <span class="skill-tag">Architecture</span>
+        </div>
+        <div class="skill-row">
+          <span>[Skill or tool]</span>
+          <span class="skill-tag">Research</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-bar" id="contact">
+    <div class="cta-text">Want to work together?</div>
+    <div class="cta-r">
+      <div class="cta-email">your@email.com</div>
+      <a href="contact.html"><button class="cta-btn">Get In Touch</button></a>
+    </div>
+  </div>
+
+  <footer>
+    <span>© 2026 Diamone Cromer — Syracuse, NY</span>
+    <span>Data × Architecture × Design</span>
+  </footer>
+
+</body>
+</html>
