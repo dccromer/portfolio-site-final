@@ -1,48 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data | Diamone Cromer</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data — Diamone Cromer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .page-header {
+      padding: 80px 56px 64px;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: end;
+    }
+    .page-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--lav);
+      margin-bottom: 16px;
+    }
+    .page-title {
+      font-family: var(--serif);
+      font-size: clamp(48px, 5vw, 72px);
+      font-weight: 300;
+      line-height: 1.0;
+      color: var(--ink);
+    }
+    .page-title em { font-style: italic; color: var(--lav); }
+    .page-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 380px;
+      align-self: end;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--border);
+    }
+
+    .project-card {
+      padding: 52px 56px;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .project-card:nth-child(even) { border-right: none; }
+    .project-card:hover { background: var(--lav-bg); }
+
+    .card-num {
+      font-family: var(--serif);
+      font-size: 13px;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--lav-bg);
+      border: 1px solid rgba(155,142,196,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-img-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--lav);
+      opacity: 0.6;
+    }
+    .card-img::before {
+      content: '';
+      position: absolute;
+      inset: 12px;
+      border: 1.5px dashed rgba(155,142,196,0.3);
+      border-radius: 2px;
+    }
+
+    .card-title {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+    .card-title em { font-style: italic; font-weight: 600; color: var(--lav); }
+
+    .card-desc {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-year { font-size: 11px; color: var(--muted); letter-spacing: 0.06em; }
+
+    .card-link {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--lav);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .project-card:hover .card-link { opacity: 1; }
+
+    /* tools tag row */
+    .card-tools {
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .card-tools span { color: var(--lav); }
+  </style>
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="logo">Diamone <em>Cromer</em></a>
-  <ul class="nav-links">
-    <li><a href="architecture.html">Architecture</a></li>
-    <li><a href="data.html" style="color: var(--ink);">Data</a></li>
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
-</nav>
+  <nav>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit">Diamone <em>Cromer</em></a></div>
+    <ul class="nav-links">
+      <li><a href="architecture.html">Architecture</a></li>
+      <li><a href="data.html" style="color:var(--ink)">Data</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<section id="work">
-  <div class="works-header">
-    <div class="col-h">#</div>
-    <div class="col-h">Research &amp; Analytics</div>
-    <div class="col-h">Stack</div>
-    <div class="col-h">Year</div>
+  <div class="page-header">
+    <div>
+      <div class="page-eyebrow">Discipline — 02</div>
+      <h1 class="page-title"><em>Data</em> &amp;<br>Analytics</h1>
+    </div>
+    <p class="page-desc">
+      <!-- Replace with a sentence about your data work -->
+      [A short line about your data practice — the kinds of problems you solve, tools you use, and how data storytelling connects to your design thinking.]
+    </p>
   </div>
 
-  <a href="#" class="work-row">
-    <div class="row-num">01</div>
-    <div>
-      <div class="row-title">Urban <em>Metrics</em></div>
-      <div class="row-desc">Data-driven city occupancy studies.</div>
-    </div>
-    <div class="chips">
-      <span class="chip chip-lav">Python</span>
-      <span class="chip chip-neu">SQL</span>
-    </div>
-    <div class="row-right"><span class="row-year">2024</span></div>
-  </a>
-</section>
+  <div class="projects-grid">
 
-<footer>
-  <span>© 2026 Diamone Cromer</span>
-</footer>
+    <!-- PROJECT 01 -->
+    <div class="project-card">
+      <div class="card-num">01 —</div>
+      <div class="card-img">
+        <span class="card-img-label">Add screenshot or viz</span>
+        <!-- Replace with: <img src="images/your-image.jpg" alt="Project name" style="width:100%;height:100%;object-fit:cover"> -->
+      </div>
+      <div class="card-title">Project <em>Name Here</em></div>
+      <div class="card-desc">
+        [One or two sentences — what data problem did you solve, what did you build, what was the outcome?]
+      </div>
+      <div class="card-tools">Tools: <span>[Python / Tableau / SQL / etc.]</span></div>
+      <div class="chips" style="margin-bottom:20px">
+        <span class="chip chip-lav">Data Analytics</span>
+        <span class="chip chip-neu">Visualization</span>
+      </div>
+      <div class="card-footer">
+        <span class="card-year">Year</span>
+        <span class="card-link">View project →</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 02 -->
+    <div class="project-card">
+      <div class="card-num">02 —</div>
+      <div class="card-img">
+        <span class="card-img-label">Add screenshot or viz</span>
+      </div>
+      <div class="card-title">Project <em>Name Here</em></div>
+      <div class="card-desc">
+        [One or two sentences describing this project.]
+      </div>
+      <div class="card-tools">Tools: <span>[Tools used]</span></div>
+      <div class="chips" style="margin-bottom:20px">
+        <span class="chip chip-lav">Machine Learning</span>
+        <span class="chip chip-neu">Research</span>
+      </div>
+      <div class="card-footer">
+        <span class="card-year">Year</span>
+        <span class="card-link">View project →</span>
+      </div>
+    </div>
+
+    <!-- PROJECT 03 — delete if not needed yet -->
+    <div class="project-card">
+      <div class="card-num">03 —</div>
+      <div class="card-img">
+        <span class="card-img-label">Add screenshot or viz</span>
+      </div>
+      <div class="card-title">Project <em>Name Here</em></div>
+      <div class="card-desc">
+        [One or two sentences describing this project.]
+      </div>
+      <div class="card-tools">Tools: <span>[Tools used]</span></div>
+      <div class="chips" style="margin-bottom:20px">
+        <span class="chip chip-neu">UX / UI</span>
+        <span class="chip chip-lav">Dashboard</span>
+      </div>
+      <div class="card-footer">
+        <span class="card-year">Year</span>
+        <span class="card-link">View project →</span>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>© 2026 Diamone Cromer — Syracuse, NY</span>
+    <span>Data × Architecture × Design</span>
+  </footer>
 
 </body>
 </html>
