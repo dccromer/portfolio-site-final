@@ -213,20 +213,23 @@
 
       <div class="contact-links">
 
-        <!-- Replace with your real email -->
-        <a class="contact-link-item" href="mailto:diamone_cromer@yahoo.com">
+        <!-- Email — clicks to open mail app, button copies to clipboard -->
+        <div class="contact-link-item" style="cursor:default;">
           <div>
             <div class="link-label">Email</div>
             <div class="link-value">diamone_cromer@yahoo.com</div>
           </div>
-          <span class="link-arrow">↗</span>
-        </a>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <a href="mailto:diamone_cromer@yahoo.com" style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--rose);text-decoration:none;font-weight:500;">Open ↗</a>
+            <button onclick="navigator.clipboard.writeText('diamone_cromer@yahoo.com').then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy'},2000)})" style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(253,248,246,0.5);background:none;border:1px solid rgba(253,248,246,0.2);padding:6px 12px;cursor:pointer;font-family:var(--sans);font-weight:500;transition:all 0.2s;">Copy</button>
+          </div>
+        </div>
 
         <!-- Replace with your real LinkedIn -->
         <a class="contact-link-item" href="https://www.linkedin.com/in/diamone-cromer-604665293" target="_blank">
           <div>
             <div class="link-label">LinkedIn</div>
-            <div class="link-value">Diamone Cromer</div>
+            <div class="link-value">linkedin.com/in/diamone-cromer</div>
           </div>
           <span class="link-arrow">↗</span>
         </a>
