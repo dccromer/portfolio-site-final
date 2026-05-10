@@ -25,10 +25,11 @@
     }
 
     .page-eyebrow {
-      font-size: 11px;
-      letter-spacing: 0.16em;
+      font-size: 13px;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--rose);
+      font-weight: 600;
       margin-bottom: 16px;
     }
 
@@ -44,46 +45,46 @@
 
     .contact-tagline {
       font-family: var(--serif);
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 300;
       font-style: italic;
-      color: rgba(253,248,246,0.55);
+      color: rgba(253,248,246,0.65);
       max-width: 360px;
       line-height: 1.6;
       margin-bottom: 52px;
     }
 
-    .contact-links { display: flex; flex-direction: column; gap: 20px; }
+    .contact-links { display: flex; flex-direction: column; gap: 4px; }
 
     .contact-link-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
       text-decoration: none;
       transition: padding-left 0.2s;
     }
     .contact-link-item:hover { padding-left: 8px; }
 
     .link-label {
-      font-size: 10px;
-      letter-spacing: 0.14em;
+      font-size: 12px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(253,248,246,0.35);
-      margin-bottom: 4px;
+      color: rgba(253,248,246,0.45);
+      margin-bottom: 6px;
+      font-weight: 500;
     }
 
     .link-value {
       font-family: var(--serif);
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 300;
       color: var(--white);
     }
 
-    .link-arrow { font-size: 18px; color: var(--rose); }
+    .link-arrow { font-size: 20px; color: var(--rose); }
 
-    /* Right panel — availability info */
     .contact-r {
       padding: 80px 56px;
       background: var(--rose-bg);
@@ -93,25 +94,26 @@
     }
 
     .avail-label {
-      font-size: 10px;
-      letter-spacing: 0.16em;
+      font-size: 13px;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--rose);
+      font-weight: 600;
       margin-bottom: 28px;
     }
 
     .avail-status {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 32px;
+      gap: 12px;
+      margin-bottom: 24px;
     }
 
     .status-dot {
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
-      background: #6bcb77;
+      background: #4caf72;
       flex-shrink: 0;
       animation: pulse 2s ease-in-out infinite;
     }
@@ -123,33 +125,34 @@
 
     .status-text {
       font-family: var(--serif);
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 300;
       color: var(--ink);
     }
 
     .avail-details {
-      font-size: 13px;
+      font-size: 15px;
       color: var(--muted);
       line-height: 1.8;
       margin-bottom: 48px;
-      max-width: 320px;
+      max-width: 340px;
     }
 
-    .avail-types { display: flex; flex-direction: column; gap: 12px; }
+    .avail-types { display: flex; flex-direction: column; gap: 14px; }
 
     .avail-type {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-size: 13px;
+      gap: 14px;
+      font-size: 15px;
       color: var(--ink);
+      font-weight: 400;
     }
 
     .avail-type::before {
       content: '';
-      width: 5px;
-      height: 5px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: var(--rose);
       flex-shrink: 0;
@@ -157,22 +160,29 @@
 
     .contact-r-bottom {
       padding-top: 48px;
-      border-top: 1px solid rgba(196,120,154,0.2);
+      border-top: 1px solid rgba(168,82,126,0.2);
     }
 
     .location-label {
-      font-size: 10px;
-      letter-spacing: 0.14em;
+      font-size: 12px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 8px;
+      font-weight: 500;
+      margin-bottom: 10px;
     }
 
     .location-value {
       font-family: var(--serif);
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 300;
       color: var(--ink);
+    }
+
+    @media (max-width: 1024px) {
+      .contact-hero { grid-template-columns: 1fr; }
+      .contact-l { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); padding: 52px 28px; }
+      .contact-r { padding: 52px 28px; }
     }
   </style>
 </head>
@@ -185,43 +195,43 @@
       <li><a href="data.html">Data</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" style="color:var(--white);background:var(--ink);padding:6px 14px;border-radius:2px">Contact</a></li>
+      <li><a href="contact.html" style="color:var(--rose)">Contact</a></li>
     </ul>
   </nav>
 
   <div class="contact-hero">
 
-    <!-- LEFT — dark panel with contact links -->
+    <!-- LEFT — dark panel -->
     <div class="contact-l">
       <div>
         <div class="page-eyebrow">Get In Touch</div>
         <h1 class="page-title">Let's <em>talk.</em></h1>
         <p class="contact-tagline">
-          Open to collaborations, internships, and creative opportunities.
+          [A warm one-liner inviting people to reach out — friendly and direct.]
         </p>
       </div>
 
       <div class="contact-links">
 
-        <!-- EMAIL — -->
-        <a class="contact-link-item" href="mailto:diamone_cromer@yahoo.com">
+        <!-- Replace with your real email -->
+        <a class="contact-link-item" href="mailto:your@email.com">
           <div>
             <div class="link-label">Email</div>
-            <div class="link-value">diamone_cromer@yahoo.com</div>
+            <div class="link-value">your@email.com</div>
           </div>
           <span class="link-arrow">↗</span>
         </a>
 
-        <!-- LINKEDIN  -->
-        <a class="contact-link-item" href="https://www.linkedin.com/in/diamone-cromer-604665293/" target="_blank">
+        <!-- Replace with your real LinkedIn -->
+        <a class="contact-link-item" href="https://linkedin.com/in/yourhandle" target="_blank">
           <div>
             <div class="link-label">LinkedIn</div>
-            <div class="link-value">linkedin.com/in/diamone-cromer</div>
+            <div class="link-value">linkedin.com/in/yourhandle</div>
           </div>
           <span class="link-arrow">↗</span>
         </a>
 
-        <!-- GITHUB  -->
+        <!-- Replace with your GitHub -->
         <a class="contact-link-item" href="https://github.com/dccromer" target="_blank">
           <div>
             <div class="link-label">GitHub</div>
@@ -230,12 +240,10 @@
           <span class="link-arrow">↗</span>
         </a>
 
-        
-
       </div>
     </div>
 
-    <!-- RIGHT — availability info -->
+    <!-- RIGHT — availability -->
     <div class="contact-r">
       <div>
         <div class="avail-label">Current Status</div>
@@ -244,12 +252,11 @@
           <div class="status-text">Available for opportunities</div>
         </div>
         <p class="avail-details">
-          <!-- Update this when your availability changes -->
           Currently open to internships, part-time roles, and collaborations for Summer 2026 and beyond.
         </p>
 
         <div class="avail-types">
-          <!-- Edit these to match what you're actually looking for -->
+          <!-- Edit these to match what you're looking for -->
           <div class="avail-type">Architecture internship</div>
           <div class="avail-type">Data analytics role</div>
           <div class="avail-type">Research collaboration</div>
@@ -259,14 +266,14 @@
 
       <div class="contact-r-bottom">
         <div class="location-label">Based in</div>
-        <div class="location-value">Brooklyn, NY / Syracuse, NY — open to remote</div>
+        <div class="location-value">Syracuse, NY — open to remote &amp; relocation</div>
       </div>
     </div>
 
   </div>
 
   <footer>
-    <span>© 2026 Diamone Cromer — Brooklyn, NY / Syracuse, NY</span>
+    <span>© 2026 Diamone Cromer — Syracuse, NY</span>
     <span>Data × Architecture × Design</span>
   </footer>
 
