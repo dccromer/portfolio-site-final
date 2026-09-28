@@ -14,7 +14,6 @@
       min-height: 60vh;
       border-bottom: 1px solid var(--border);
     }
-
     .about-hero-l {
       padding: 80px 56px;
       border-right: 1px solid var(--border);
@@ -22,7 +21,6 @@
       flex-direction: column;
       justify-content: space-between;
     }
-
     .page-eyebrow {
       font-size: 13px;
       letter-spacing: 0.14em;
@@ -31,7 +29,6 @@
       font-weight: 600;
       margin-bottom: 16px;
     }
-
     .page-title {
       font-family: var(--serif);
       font-size: clamp(48px, 5vw, 72px);
@@ -41,7 +38,6 @@
       margin-bottom: 32px;
     }
     .page-title em { font-style: italic; color: var(--rose); }
-
     .about-bio {
       font-family: var(--serif);
       font-size: 20px;
@@ -52,14 +48,12 @@
       margin-bottom: 24px;
     }
     .about-bio em { font-style: italic; color: var(--rose); }
-
     .about-bio-small {
       font-size: 15px;
       color: var(--muted);
       line-height: 1.85;
       max-width: 480px;
     }
-
     .about-hero-r {
       background: var(--rose-bg);
       display: flex;
@@ -68,7 +62,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .photo-placeholder {
       width: 220px;
       height: 280px;
@@ -79,9 +72,7 @@
       justify-content: center;
       gap: 12px;
     }
-
     .photo-placeholder-icon { font-size: 32px; opacity: 0.3; }
-
     .photo-placeholder-label {
       font-size: 12px;
       letter-spacing: 0.1em;
@@ -90,19 +81,16 @@
       opacity: 0.6;
       text-align: center;
     }
-
     .about-details {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       border-bottom: 1px solid var(--border);
     }
-
     .detail-col {
       padding: 56px 56px;
       border-right: 1px solid var(--border);
     }
     .detail-col:last-child { border-right: none; }
-
     .detail-label {
       font-size: 13px;
       letter-spacing: 0.14em;
@@ -111,9 +99,7 @@
       font-weight: 600;
       margin-bottom: 32px;
     }
-
     .exp-item { margin-bottom: 28px; }
-
     .exp-title {
       font-family: var(--serif);
       font-size: 18px;
@@ -121,27 +107,19 @@
       margin-bottom: 4px;
       color: var(--ink);
     }
-
     .exp-where {
       font-size: 14px;
       color: var(--muted);
       font-weight: 400;
       margin-bottom: 2px;
     }
-
     .exp-when {
       font-size: 13px;
       color: var(--muted);
       margin-top: 2px;
       font-weight: 400;
     }
-
-    .skills-list {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
+    .skills-list { display: flex; flex-direction: column; gap: 4px; }
     .skill-row {
       display: flex;
       justify-content: space-between;
@@ -153,7 +131,6 @@
       font-weight: 400;
     }
     .skill-row:last-child { border-bottom: none; }
-
     .skill-tag {
       font-size: 11px;
       letter-spacing: 0.08em;
@@ -161,7 +138,6 @@
       color: var(--muted);
       font-weight: 500;
     }
-
     @media (max-width: 1024px) {
       .about-hero { grid-template-columns: 1fr; }
       .about-hero-l { border-right: none; border-bottom: 1px solid var(--border); padding: 52px 28px; }
@@ -176,10 +152,10 @@
   <nav>
     <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit">Diamone <em>Cromer</em></a></div>
     <ul class="nav-links">
+      <li><a href="about.html" style="color:var(--ink)">About</a></li>
       <li><a href="architecture.html">Architecture</a></li>
       <li><a href="data.html">Data</a></li>
       <li><a href="research.html">Research</a></li>
-      <li><a href="about.html" style="color:var(--ink)">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -191,11 +167,11 @@
         <h1 class="page-title">Diamone<br><em>Cromer</em></h1>
 
         <p class="about-bio">
-          [Your main bio — 2 sentences. Who are you, what do you care about, what makes you unusual?]
+          Diamone Cromer is a junior at Syracuse University studying Data Analytics, with minors in Architecture and Computer Science. As an Undergraduate Research Fellow at The SOURCE, she applies Python and machine learning to model building energy performance — bridging data science and spatial design across research, fabrication, and the classroom.
         </p>
 
         <p class="about-bio-small">
-          [Optional second paragraph — more detail about your background, what pulled you toward both data and architecture, or what you're working toward.]
+          [Add 1–2 personal sentences here — where you're from, what drives you outside of work.]
         </p>
       </div>
 
@@ -209,7 +185,7 @@
           <div class="stat-label">Disciplines</div>
         </div>
         <div>
-          <div class="stat-num">'<sup style="color:var(--lav)">26</sup></div>
+          <div class="stat-num">'<sup style="color:var(--lav)">28</sup></div>
           <div class="stat-label">Graduate</div>
         </div>
       </div>
@@ -219,7 +195,7 @@
       <div class="photo-placeholder">
         <div class="photo-placeholder-icon">◻</div>
         <div class="photo-placeholder-label">Add your photo here</div>
-        <!-- To add photo replace the photo-placeholder div with:
+        <!-- To add photo, replace this div with:
              <img src="images/diamone.jpg" alt="Diamone Cromer" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0"> -->
       </div>
     </div>
@@ -231,19 +207,19 @@
     <div class="detail-col">
       <div class="detail-label">Experience</div>
       <div class="exp-item">
-        <div class="exp-title">Role Title</div>
-        <div class="exp-where">Organization Name</div>
-        <div class="exp-when">2025 — Present</div>
+        <div class="exp-title">Undergraduate Research Fellow</div>
+        <div class="exp-where">The SOURCE at Syracuse University</div>
+        <div class="exp-when">June 2025 — May 2026</div>
       </div>
       <div class="exp-item">
-        <div class="exp-title">Role Title</div>
-        <div class="exp-where">Organization Name</div>
-        <div class="exp-when">2024 — 2025</div>
+        <div class="exp-title">Makerspace Assistant</div>
+        <div class="exp-where">Syracuse University Makerspace</div>
+        <div class="exp-when">August 2026 — Present</div>
       </div>
       <div class="exp-item">
-        <div class="exp-title">Role Title</div>
-        <div class="exp-where">Organization Name</div>
-        <div class="exp-when">2023</div>
+        <div class="exp-title">Game Design Teaching Assistant</div>
+        <div class="exp-where">Gaming Learning Center, New York, NY</div>
+        <div class="exp-when">June 2024 — August 2024</div>
       </div>
     </div>
 
@@ -251,14 +227,12 @@
     <div class="detail-col">
       <div class="detail-label">Education</div>
       <div class="exp-item">
-        <div class="exp-title">Degree / Program</div>
-        <div class="exp-where">Syracuse University</div>
-        <div class="exp-when">2023 — 2026</div>
-      </div>
-      <div class="exp-item">
-        <div class="exp-title">School Name</div>
-        <div class="exp-where">New York, NY</div>
-        <div class="exp-when">2020 — 2023</div>
+        <div class="exp-title">B.S. Data Analytics</div>
+        <div class="exp-where">Syracuse University — School of Information Studies</div>
+        <div class="exp-when">
+          Minors: Architecture, Computer Science<br>
+          August 2023 — May 2028
+        </div>
       </div>
     </div>
 
@@ -267,28 +241,24 @@
       <div class="detail-label">Skills &amp; Tools</div>
       <div class="skills-list">
         <div class="skill-row">
-          <span>[Skill or tool]</span>
-          <span class="skill-tag">Architecture</span>
+          <span>Python, JavaScript, R</span>
+          <span class="skill-tag">Programming</span>
         </div>
         <div class="skill-row">
-          <span>[Skill or tool]</span>
+          <span>Machine Learning & Statistical Analysis</span>
           <span class="skill-tag">Data</span>
         </div>
         <div class="skill-row">
-          <span>[Skill or tool]</span>
+          <span>Rhino 3D, SketchUp</span>
+          <span class="skill-tag">Architecture</span>
+        </div>
+        <div class="skill-row">
+          <span>Adobe Illustrator, InDesign, Photoshop</span>
           <span class="skill-tag">Design</span>
         </div>
         <div class="skill-row">
-          <span>[Skill or tool]</span>
+          <span>Data Visualization</span>
           <span class="skill-tag">Data</span>
-        </div>
-        <div class="skill-row">
-          <span>[Skill or tool]</span>
-          <span class="skill-tag">Architecture</span>
-        </div>
-        <div class="skill-row">
-          <span>[Skill or tool]</span>
-          <span class="skill-tag">Research</span>
         </div>
       </div>
     </div>
