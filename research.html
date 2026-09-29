@@ -17,13 +17,13 @@
       align-items: end;
     }
     .page-eyebrow {
-      font-size: 11px;
-      letter-spacing: 0.16em;
+      font-size: 13px;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--rose);
+      font-weight: 600;
       margin-bottom: 16px;
     }
-    .page-eyebrow span { color: var(--rose); }
     .page-title {
       font-family: var(--serif);
       font-size: clamp(48px, 5vw, 72px);
@@ -33,35 +33,36 @@
     }
     .page-title em { font-style: italic; color: var(--lav); }
     .page-desc {
-      font-size: 13px;
+      font-size: 15px;
       color: var(--muted);
       line-height: 1.8;
       max-width: 380px;
       align-self: end;
     }
 
-    /* Research uses a single-column layout — more reading, less scanning */
     .research-list { border-top: 1px solid var(--border); }
 
     .research-item {
       display: grid;
-      grid-template-columns: 100px 1fr 200px;
+      grid-template-columns: 100px 1fr 220px;
       gap: 40px;
-      padding: 44px 56px;
+      padding: 52px 56px;
       border-bottom: 1px solid var(--border);
       align-items: start;
       cursor: pointer;
       transition: background 0.2s;
+      text-decoration: none;
+      color: inherit;
     }
     .research-item:hover { background: var(--lav-bg); }
     .research-item:hover .res-link { opacity: 1; }
 
     .res-num {
       font-family: var(--serif);
-      font-size: 36px;
+      font-size: 40px;
       font-style: italic;
       font-weight: 600;
-      color: var(--lav-bg);
+      color: #e0d8f0;
       line-height: 1;
       padding-top: 4px;
     }
@@ -70,16 +71,17 @@
       font-family: var(--serif);
       font-size: 26px;
       font-weight: 300;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       color: var(--ink);
+      line-height: 1.2;
     }
     .res-title em { font-style: italic; font-weight: 600; color: var(--lav); }
 
     .res-desc {
-      font-size: 13px;
+      font-size: 14px;
       color: var(--muted);
-      line-height: 1.75;
-      margin-bottom: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
       max-width: 560px;
     }
 
@@ -94,27 +96,34 @@
     }
 
     .res-org {
-      font-size: 11px;
+      font-size: 13px;
       color: var(--muted);
       text-align: right;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .res-year {
       font-family: var(--serif);
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 600;
       color: var(--ink);
       line-height: 1;
     }
 
     .res-link {
-      font-size: 11px;
+      font-size: 12px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--lav);
+      font-weight: 500;
       opacity: 0;
       transition: opacity 0.2s;
+    }
+
+    @media (max-width: 1024px) {
+      .page-header { grid-template-columns: 1fr; padding: 52px 28px; }
+      .research-item { grid-template-columns: 60px 1fr; padding: 36px 28px; gap: 20px; }
+      .res-right { display: none; }
     }
   </style>
 </head>
@@ -123,92 +132,66 @@
   <nav>
     <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit">Diamone <em>Cromer</em></a></div>
     <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
       <li><a href="architecture.html">Architecture</a></li>
       <li><a href="data.html">Data</a></li>
       <li><a href="research.html" style="color:var(--ink)">Research</a></li>
-      <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
   <div class="page-header">
     <div>
-      <div class="page-eyebrow">Discipline — <span>03</span></div>
+      <div class="page-eyebrow">Discipline — 03</div>
       <h1 class="page-title">Re<em>search</em></h1>
     </div>
     <p class="page-desc">
-      <!-- Replace with a sentence about your research -->
-      [A short line about your research focus — the questions you're asking, the methods you use, and how research connects your two disciplines.]
+      Using data to ask better questions about the built environment — from sensor systems and predictive maintenance to the intersection of building science and analytics.
     </p>
   </div>
 
   <div class="research-list">
 
-    <!-- RESEARCH 01 — replace all placeholder text -->
-    <div class="research-item">
+    <!-- RESEARCH 01 — HVAC Paper -->
+    <a class="research-item" href="FINAL_Detecting_HVAC_Underperformance_in_Residential_Buildings__A_Sensor-Based_Approach_to_Predictive_Maintenance__1_.pdf" target="_blank">
       <div class="res-num">01</div>
       <div>
-        <div class="res-title">Research <em>Title Here</em></div>
+        <div class="res-title">Detecting HVAC Underperformance in Residential <em>Buildings</em></div>
         <div class="res-desc">
-          [2–3 sentences describing this research — what question it investigates, what methods you used, and what you found or built. This is the place to go a bit deeper than a project card.]
+          This study examines whether existing building sensor data can detect poor heating performance before residents file complaints. Using indoor temperature, occupancy, and outdoor weather data from two Syracuse University dormitory units, a three-condition flagging system identified heating issues — revealing that Unit A-8 had a heating issue rate of 8.6% compared to 3.6% in Unit A-7, despite sharing the same building and heating system.
         </div>
         <div class="res-meta">
-          <span class="chip chip-lav">Method / Tool</span>
-          <span class="chip chip-neu">Topic Area</span>
-          <span class="chip chip-rose">Outcome</span>
+          <span class="chip chip-lav">Python / pandas</span>
+          <span class="chip chip-neu">Predictive Maintenance</span>
+          <span class="chip chip-rose">Smart Buildings</span>
+          <span class="chip chip-neu">Sensor Data</span>
         </div>
       </div>
       <div class="res-right">
-        <div class="res-year">2024</div>
-        <div class="res-org">[Organization or<br>course name]</div>
-        <div class="res-link">Read more →</div>
+        <div class="res-year">2026</div>
+        <div class="res-org">The SOURCE at<br>Syracuse University</div>
+        <div class="res-link">Read paper →</div>
       </div>
-    </div>
+    </a>
 
-    <!-- RESEARCH 02 -->
-    <div class="research-item">
+    <!-- PLACEHOLDER 02 -->
+    <div class="research-item" style="cursor:default;opacity:0.4;">
       <div class="res-num">02</div>
       <div>
-        <div class="res-title">Research <em>Title Here</em></div>
+        <div class="res-title">Research <em>Coming Soon</em></div>
         <div class="res-desc">
-          [2–3 sentences describing this research project.]
-        </div>
-        <div class="res-meta">
-          <span class="chip chip-lav">Method / Tool</span>
-          <span class="chip chip-neu">Topic Area</span>
+          More research to be added.
         </div>
       </div>
       <div class="res-right">
-        <div class="res-year">2024</div>
-        <div class="res-org">[Organization or<br>course name]</div>
-        <div class="res-link">Read more →</div>
-      </div>
-    </div>
-
-    <!-- RESEARCH 03 — delete if not needed yet -->
-    <div class="research-item">
-      <div class="res-num">03</div>
-      <div>
-        <div class="res-title">Research <em>Title Here</em></div>
-        <div class="res-desc">
-          [2–3 sentences describing this research project.]
-        </div>
-        <div class="res-meta">
-          <span class="chip chip-neu">Method / Tool</span>
-          <span class="chip chip-rose">Topic Area</span>
-        </div>
-      </div>
-      <div class="res-right">
-        <div class="res-year">2023</div>
-        <div class="res-org">[Organization or<br>course name]</div>
-        <div class="res-link">Read more →</div>
+        <div class="res-year">—</div>
       </div>
     </div>
 
   </div>
 
   <footer>
-    <span>© 2026 Diamone Cromer — Syracuse, NY</span>
+    <span>© 2026 Diamone Cromer —  Syracuse, NY</span>
     <span>Data × Architecture × Design</span>
   </footer>
 
