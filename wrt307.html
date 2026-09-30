@@ -1,1 +1,363 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WRT 307 — Diamone Cromer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .page-header {
+      padding: 80px 56px 64px;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: end;
+    }
+    .page-eyebrow {
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .page-title {
+      font-family: var(--serif);
+      font-size: clamp(48px, 5vw, 72px);
+      font-weight: 300;
+      line-height: 1.0;
+      color: var(--ink);
+    }
+    .page-title em { font-style: italic; color: var(--lav); }
+    .page-desc {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 380px;
+      align-self: end;
+    }
+
+    .project-block {
+      border-bottom: 1px solid var(--border);
+      padding: 64px 56px;
+    }
+    .project-block:nth-child(even) { background: var(--lav-bg); }
+
+    .project-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .project-num {
+      font-family: var(--serif);
+      font-size: 13px;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .project-title {
+      font-family: var(--serif);
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .project-title em { font-style: italic; color: var(--lav); font-weight: 600; }
+
+    .project-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .project-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.85;
+      max-width: 680px;
+      margin-bottom: 24px;
+    }
+
+    /* placeholder state */
+    .pdf-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--rose-bg);
+      border: 1.5px dashed rgba(168,82,126,0.25);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .pdf-placeholder-label {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rose);
+      opacity: 0.5;
+    }
+
+    /* swiper */
+    .pdf-swiper {
+      position: relative;
+      width: 100%;
+      margin-bottom: 28px;
+      border: 1px solid var(--border);
+      background: #f8f6f0;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    .pdf-slides {
+      display: flex;
+      transition: transform 0.35s ease;
+      will-change: transform;
+    }
+    .pdf-slide { min-width: 100%; }
+    .pdf-slide iframe {
+      width: 100%;
+      height: 620px;
+      border: none;
+      display: block;
+    }
+    .swiper-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--ink);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .swiper-btn:hover { background: var(--lav); color: #fff; border-color: var(--lav); }
+    .swiper-btn.prev { left: 14px; }
+    .swiper-btn.next { right: 14px; }
+    .swiper-btn:disabled { opacity: 0.25; cursor: default; }
+    .swiper-btn:disabled:hover { background: var(--white); color: var(--ink); border-color: var(--border); }
+    .swiper-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 0 0;
+      flex-wrap: wrap;
+    }
+    .swiper-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--border);
+      border: none; cursor: pointer; padding: 0;
+      transition: background 0.2s;
+    }
+    .swiper-dot.active { background: var(--lav); }
+    .swiper-counter {
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      margin-top: 8px;
+      margin-bottom: 20px;
+    }
+    .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--lav);
+      text-decoration: none;
+      font-weight: 500;
+      border: 1px solid var(--lav);
+      padding: 8px 18px;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .download-link:hover { background: var(--lav); color: #fff; }
+
+    @media (max-width: 1024px) {
+      .page-header { grid-template-columns: 1fr; padding: 52px 28px; }
+      .project-block { padding: 48px 28px; }
+      .pdf-slide iframe { height: 420px; }
+    }
+    @media (max-width: 640px) {
+      .project-block { padding: 36px 20px; }
+      .pdf-slide iframe { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit">Diamone <em>Cromer</em></a></div>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="architecture.html">Architecture</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div>
+      <div class="page-eyebrow">WRT 307 — Correspondence Portfolio</div>
+      <h1 class="page-title">Cover <em>Letters</em></h1>
+    </div>
+    <p class="page-desc">
+      A collection of professional correspondence — local, national, and international job applications, plus a speaking invitation — written for WRT 307 at Syracuse University.
+    </p>
+  </div>
+
+  <!-- 01 LOCAL -->
+  <div class="project-block" id="local">
+    <div class="project-meta-row">
+      <span class="project-num">01 —</span>
+      <div class="chips">
+        <span class="chip chip-lav">Local</span>
+        <span class="chip chip-neu">Cover Letter + Audience Analysis</span>
+      </div>
+    </div>
+    <div class="project-title">Local <em>Cover Letter</em></div>
+    <div class="project-subtitle">WRT 307 — Fall 2026</div>
+    <div class="project-desc">
+      A one-page cover letter applying to a local organization, accompanied by a full audience analysis examining the employer's values, goals, and communication style.
+    </div>
+    <!-- PLACEHOLDER — replace with swiper once you have the PDF -->
+    <div class="pdf-placeholder">
+      <span class="pdf-placeholder-label">Upload local-cover-letter.pdf to activate</span>
+    </div>
+    <!-- WHEN READY: delete the pdf-placeholder above and paste in:
+    <div class="pdf-swiper" id="swiper-1">
+      <div class="pdf-slides" id="slides-1">
+        <div class="pdf-slide"><iframe src="local-cover-letter.pdf#page=1" title="Local cover letter"></iframe></div>
+        <div class="pdf-slide"><iframe src="local-cover-letter.pdf#page=2" title="Audience analysis" loading="lazy"></iframe></div>
+      </div>
+      <button class="swiper-btn prev" onclick="slide('swiper-1',-1)" id="prev-1">‹</button>
+      <button class="swiper-btn next" onclick="slide('swiper-1', 1)" id="next-1">›</button>
+    </div>
+    <div class="swiper-dots" id="dots-1">
+      <button class="swiper-dot active" onclick="goTo('swiper-1',0)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1',1)"></button>
+    </div>
+    <div class="swiper-counter" id="counter-1">1 / 2</div>
+    <a class="download-link" href="local-cover-letter.pdf" target="_blank">Download ↗</a>
+    -->
+  </div>
+
+  <!-- 02 NATIONAL -->
+  <div class="project-block" id="national">
+    <div class="project-meta-row">
+      <span class="project-num">02 —</span>
+      <div class="chips">
+        <span class="chip chip-lav">National</span>
+        <span class="chip chip-neu">Cover Letter + Audience Analysis</span>
+      </div>
+    </div>
+    <div class="project-title">National <em>Cover Letter</em></div>
+    <div class="project-subtitle">WRT 307 — Fall 2026</div>
+    <div class="project-desc">
+      A one-page cover letter responding to a real national job posting, with demonstrated research into the organization's mission, culture, and values.
+    </div>
+    <div class="pdf-placeholder">
+      <span class="pdf-placeholder-label">Upload national-cover-letter.pdf to activate</span>
+    </div>
+    <!-- WHEN READY: same swiper structure as above, use id="swiper-2" -->
+  </div>
+
+  <!-- 03 INTERNATIONAL -->
+  <div class="project-block" id="international">
+    <div class="project-meta-row">
+      <span class="project-num">03 —</span>
+      <div class="chips">
+        <span class="chip chip-lav">International</span>
+        <span class="chip chip-neu">Cover Letter + Audience Analysis</span>
+      </div>
+    </div>
+    <div class="project-title">International <em>Cover Letter</em></div>
+    <div class="project-subtitle">WRT 307 — Fall 2026</div>
+    <div class="project-desc">
+      A one-page cover letter responding to a real international job posting, connecting to the organization's global values and demonstrating cross-cultural awareness.
+    </div>
+    <div class="pdf-placeholder">
+      <span class="pdf-placeholder-label">Upload international-cover-letter.pdf to activate</span>
+    </div>
+    <!-- WHEN READY: same swiper structure, use id="swiper-3" -->
+  </div>
+
+  <!-- 04 SPEAKING INVITATION -->
+  <div class="project-block" id="speaking">
+    <div class="project-meta-row">
+      <span class="project-num">04 —</span>
+      <div class="chips">
+        <span class="chip chip-rose">Speaking Invitation</span>
+        <span class="chip chip-neu">Audience Analysis</span>
+      </div>
+    </div>
+    <div class="project-title">Speaking <em>Invitation</em></div>
+    <div class="project-subtitle">WRT 307 — Fall 2026</div>
+    <div class="project-desc">
+      A one-page letter inviting a real speaker to present at a continuing education event, accompanied by an audience analysis of the speaker's objectives and values.
+    </div>
+    <div class="pdf-placeholder">
+      <span class="pdf-placeholder-label">Upload speaking-invitation.pdf to activate</span>
+    </div>
+    <!-- WHEN READY: same swiper structure, use id="swiper-4" -->
+  </div>
+
+  <footer>
+    <span>© 2026 Diamone Cromer — New York, NY </span>
+    <span>Data × Architecture × Design</span>
+  </footer>
+
+  <script>
+    const state = {};
+    function update(id) {
+      const num = id.split('-')[1];
+      const slides = document.querySelectorAll(`#slides-${num} .pdf-slide`);
+      const total = slides.length;
+      const cur = state[id] || 0;
+      document.getElementById(`slides-${num}`).style.transform = `translateX(-${cur * 100}%)`;
+      document.querySelectorAll(`#dots-${num} .swiper-dot`).forEach((d,i) => d.classList.toggle('active', i === cur));
+      document.getElementById(`counter-${num}`).textContent = `${cur + 1} / ${total}`;
+      document.getElementById(`prev-${num}`).disabled = cur === 0;
+      document.getElementById(`next-${num}`).disabled = cur === total - 1;
+    }
+    function slide(id, dir) {
+      const num = id.split('-')[1];
+      const total = document.querySelectorAll(`#slides-${num} .pdf-slide`).length;
+      state[id] = Math.max(0, Math.min((state[id] || 0) + dir, total - 1));
+      update(id);
+    }
+    function goTo(id, index) { state[id] = index; update(id); }
+    document.querySelectorAll('.pdf-swiper').forEach(swiper => {
+      let startX = 0;
+      const id = swiper.id;
+      swiper.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+      swiper.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) slide(id, diff > 0 ? 1 : -1);
+      });
+    });
+  </script>
+
+</body>
+</html>
