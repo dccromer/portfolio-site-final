@@ -40,90 +40,169 @@
       align-self: end;
     }
 
-    .research-list { border-top: 1px solid var(--border); }
-
-    .research-item {
-      display: grid;
-      grid-template-columns: 100px 1fr 220px;
-      gap: 40px;
-      padding: 52px 56px;
+    /* ── PROJECT BLOCK ── */
+    .project-block {
       border-bottom: 1px solid var(--border);
-      align-items: start;
-      cursor: pointer;
-      transition: background 0.2s;
-      text-decoration: none;
-      color: inherit;
-    }
-    .research-item:hover { background: var(--lav-bg); }
-    .research-item:hover .res-link { opacity: 1; }
-
-    .res-num {
-      font-family: var(--serif);
-      font-size: 40px;
-      font-style: italic;
-      font-weight: 600;
-      color: #e0d8f0;
-      line-height: 1;
-      padding-top: 4px;
+      padding: 64px 56px;
     }
 
-    .res-title {
-      font-family: var(--serif);
-      font-size: 26px;
-      font-weight: 300;
-      margin-bottom: 12px;
-      color: var(--ink);
-      line-height: 1.2;
-    }
-    .res-title em { font-style: italic; font-weight: 600; color: var(--lav); }
-
-    .res-desc {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.8;
-      margin-bottom: 20px;
-      max-width: 560px;
-    }
-
-    .res-meta { display: flex; gap: 10px; flex-wrap: wrap; }
-
-    .res-right {
+    .project-meta-row {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 12px;
-      padding-top: 4px;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 16px;
     }
 
-    .res-org {
+    .project-num {
+      font-family: var(--serif);
+      font-size: 13px;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .project-title {
+      font-family: var(--serif);
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .project-title em { font-style: italic; color: var(--lav); font-weight: 600; }
+
+    .project-subtitle {
       font-size: 13px;
       color: var(--muted);
-      text-align: right;
-      line-height: 1.6;
+      margin-bottom: 20px;
     }
 
-    .res-year {
-      font-family: var(--serif);
-      font-size: 32px;
-      font-weight: 600;
+    .project-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.85;
+      max-width: 680px;
+      margin-bottom: 24px;
+    }
+
+    /* ── PDF SWIPER ── */
+    .pdf-swiper {
+      position: relative;
+      width: 100%;
+      margin-bottom: 28px;
+      border: 1px solid var(--border);
+      background: #f8f6f0;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+
+    .pdf-slides {
+      display: flex;
+      transition: transform 0.35s ease;
+      will-change: transform;
+    }
+
+    .pdf-slide {
+      min-width: 100%;
+    }
+
+    .pdf-slide iframe {
+      width: 100%;
+      height: 620px;
+      border: none;
+      display: block;
+    }
+
+    .swiper-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--white);
+      border: 1px solid var(--border);
       color: var(--ink);
-      line-height: 1;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .swiper-btn:hover { background: var(--lav); color: #fff; border-color: var(--lav); }
+    .swiper-btn.prev { left: 14px; }
+    .swiper-btn.next { right: 14px; }
+    .swiper-btn:disabled { opacity: 0.25; cursor: default; }
+    .swiper-btn:disabled:hover { background: var(--white); color: var(--ink); border-color: var(--border); }
+
+    .swiper-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 0 0;
+      flex-wrap: wrap;
+    }
+    .swiper-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--border);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.2s;
+    }
+    .swiper-dot.active { background: var(--lav); }
+
+    .swiper-counter {
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      margin-top: 8px;
+      margin-bottom: 20px;
     }
 
-    .res-link {
+    .download-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       font-size: 12px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--lav);
+      text-decoration: none;
       font-weight: 500;
-      opacity: 0;
-      transition: opacity 0.2s;
+      border: 1px solid var(--lav);
+      padding: 8px 18px;
+      border-radius: 2px;
+      transition: all 0.2s;
     }
+    .download-link:hover { background: var(--lav); color: #fff; }
+
+    /* placeholder */
+    .coming-soon {
+      padding: 64px 56px;
+      border-bottom: 1px solid var(--border);
+      opacity: 0.4;
+    }
+    .coming-soon .project-num { font-family: var(--serif); font-size: 13px; font-style: italic; color: var(--muted); margin-bottom: 16px; }
+    .coming-soon .project-title { font-family: var(--serif); font-size: 28px; font-weight: 300; color: var(--ink); }
+    .coming-soon .project-title em { font-style: italic; color: var(--lav); }
 
     @media (max-width: 1024px) {
       .page-header { grid-template-columns: 1fr; padding: 52px 28px; }
-      .research-item { grid-template-columns: 60px 1fr; padding: 36px 28px; gap: 20px; }
-      .res-right { display: none; }
+      .project-block { padding: 48px 28px; }
+      .coming-soon { padding: 48px 28px; }
+      .pdf-slide iframe { height: 420px; }
+    }
+    @media (max-width: 640px) {
+      .project-block { padding: 36px 20px; }
+      .pdf-slide iframe { height: 300px; }
     }
   </style>
 </head>
@@ -141,7 +220,7 @@
 
   <div class="page-header">
     <div>
-      <div class="page-eyebrow">Discipline — 03</div>
+      <div class="page-eyebrow">Discipline — 02</div>
       <h1 class="page-title">Re<em>search</em></h1>
     </div>
     <p class="page-desc">
@@ -149,50 +228,104 @@
     </p>
   </div>
 
-  <div class="research-list">
-
-    <!-- RESEARCH 01 — HVAC Paper -->
-    <a class="research-item" href="hvac-research.pdf" target="_blank"> 
-      <div class="res-num">01</div>
-      <div>
-        <div class="res-title">Detecting HVAC Underperformance in Residential <em>Buildings</em></div>
-        <div class="res-desc">
-          This study examines whether existing building sensor data can detect poor heating performance before residents file complaints. Using indoor temperature, occupancy, and outdoor weather data from two Syracuse University dormitory units, a three-condition flagging system identified heating issues — revealing that Unit A-8 had a heating issue rate of 8.6% compared to 3.6% in Unit A-7, despite sharing the same building and heating system.
-        </div>
-        <div class="res-meta">
-          <span class="chip chip-lav">Python / pandas</span>
-          <span class="chip chip-neu">Predictive Maintenance</span>
-          <span class="chip chip-rose">Smart Buildings</span>
-          <span class="chip chip-neu">Sensor Data</span>
-        </div>
-      </div>
-      <div class="res-right">
-        <div class="res-year">2026</div>
-        <div class="res-org">The SOURCE at<br>Syracuse University</div>
-        <div class="res-link">Read paper →</div>
-      </div>
-    </a>
-
-    <!-- PLACEHOLDER 02 -->
-    <div class="research-item" style="cursor:default;opacity:0.4;">
-      <div class="res-num">02</div>
-      <div>
-        <div class="res-title">Research <em>Coming Soon</em></div>
-        <div class="res-desc">
-          More research to be added.
-        </div>
-      </div>
-      <div class="res-right">
-        <div class="res-year">—</div>
+  <!-- RESEARCH 01 -->
+  <div class="project-block">
+    <div class="project-meta-row">
+      <span class="project-num">01 —</span>
+      <div class="chips">
+        <span class="chip chip-lav">Python / pandas</span>
+        <span class="chip chip-neu">Predictive Maintenance</span>
+        <span class="chip chip-rose">Smart Buildings</span>
       </div>
     </div>
+    <div class="project-title">Detecting HVAC Underperformance in Residential <em>Buildings</em></div>
+    <div class="project-subtitle">The SOURCE at Syracuse University — Spring 2026</div>
+    <div class="project-desc">
+      This study examines whether existing building sensor data can detect poor heating performance before residents file complaints. Using indoor temperature, occupancy, and outdoor weather data from two Syracuse University dormitory units, a three-condition flagging system identified heating issues — revealing that Unit A-8 had a heating issue rate of 8.6% compared to 3.6% in Unit A-7, despite sharing the same building and heating system.
+    </div>
 
+    <div class="pdf-swiper" id="swiper-1">
+      <div class="pdf-slides" id="slides-1">
+        <div class="pdf-slide"><iframe src="hvac-research.pdf#page=1" title="HVAC Research page 1"></iframe></div>
+        <div class="pdf-slide"><iframe src="hvac-research.pdf#page=2" title="HVAC Research page 2" loading="lazy"></iframe></div>
+        <div class="pdf-slide"><iframe src="hvac-research.pdf#page=3" title="HVAC Research page 3" loading="lazy"></iframe></div>
+        <div class="pdf-slide"><iframe src="hvac-research.pdf#page=4" title="HVAC Research page 4" loading="lazy"></iframe></div>
+        <div class="pdf-slide"><iframe src="hvac-research.pdf#page=5" title="HVAC Research page 5" loading="lazy"></iframe></div>
+        <div class="pdf-slide"><iframe src="hvac-research.pdf#page=6" title="HVAC Research page 6" loading="lazy"></iframe></div>
+        <div class="pdf-slide"><iframe src="hvac-research.pdf#page=7" title="HVAC Research page 7" loading="lazy"></iframe></div>
+        <div class="pdf-slide"><iframe src="hvac-research.pdf#page=8" title="HVAC Research page 8" loading="lazy"></iframe></div>
+        <div class="pdf-slide"><iframe src="hvac-research.pdf#page=9" title="HVAC Research page 9" loading="lazy"></iframe></div>
+        <div class="pdf-slide"><iframe src="hvac-research.pdf#page=10" title="HVAC Research page 10" loading="lazy"></iframe></div>
+      </div>
+      <button class="swiper-btn prev" onclick="slide('swiper-1',-1)" id="prev-1">‹</button>
+      <button class="swiper-btn next" onclick="slide('swiper-1', 1)" id="next-1">›</button>
+    </div>
+    <div class="swiper-dots" id="dots-1">
+      <button class="swiper-dot active" onclick="goTo('swiper-1',0)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1',1)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1',2)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1',3)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1',4)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1',5)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1',6)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1',7)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1',8)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1',9)"></button>
+    </div>
+    <div class="swiper-counter" id="counter-1">1 / 10</div>
+    <a class="download-link" href="hvac-research.pdf" target="_blank">Download full paper ↗</a>
+  </div>
+
+  <!-- PLACEHOLDER -->
+  <div class="coming-soon">
+    <div class="project-num">02 —</div>
+    <div class="project-title">Research <em>Coming Soon</em></div>
   </div>
 
   <footer>
-    <span>© 2026 Diamone Cromer —  Syracuse, NY</span>
+    <span>© 2026 Diamone Cromer — New York, NY ~ Syracuse, NY</span>
     <span>Data × Architecture × Design</span>
   </footer>
+
+  <script>
+    const state = {};
+
+    function update(id) {
+      const num = id.split('-')[1];
+      const slides = document.querySelectorAll(`#slides-${num} .pdf-slide`);
+      const total = slides.length;
+      const cur = state[id] || 0;
+      document.getElementById(`slides-${num}`).style.transform = `translateX(-${cur * 100}%)`;
+      document.querySelectorAll(`#dots-${num} .swiper-dot`).forEach((d,i) => d.classList.toggle('active', i === cur));
+      document.getElementById(`counter-${num}`).textContent = `${cur + 1} / ${total}`;
+      document.getElementById(`prev-${num}`).disabled = cur === 0;
+      document.getElementById(`next-${num}`).disabled = cur === total - 1;
+    }
+
+    function slide(id, dir) {
+      const num = id.split('-')[1];
+      const total = document.querySelectorAll(`#slides-${num} .pdf-slide`).length;
+      state[id] = Math.max(0, Math.min((state[id] || 0) + dir, total - 1));
+      update(id);
+    }
+
+    function goTo(id, index) {
+      state[id] = index;
+      update(id);
+    }
+
+    document.querySelectorAll('.pdf-swiper').forEach(swiper => {
+      let startX = 0;
+      const id = swiper.id;
+      swiper.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+      swiper.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) slide(id, diff > 0 ? 1 : -1);
+      });
+    });
+
+    ['swiper-1'].forEach(id => { state[id] = 0; update(id); });
+  </script>
 
 </body>
 </html>
