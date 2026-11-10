@@ -176,6 +176,50 @@
       margin-top: 8px;
     }
 
+
+    /* image boards */
+    .board-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f8f6f0;
+      padding: 16px;
+    }
+    .board-slide a { display: block; cursor: zoom-in; }
+    .board-slide img {
+      display: block;
+      max-width: 100%;
+      max-height: 680px;
+      width: auto;
+      height: auto;
+      box-shadow: 0 2px 12px rgba(30,22,40,0.08);
+    }
+    .swiper-dots { flex-wrap: wrap; }
+    .dl-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .dl-btn {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rose);
+      text-decoration: none;
+      font-weight: 500;
+      border: 1px solid var(--rose);
+      padding: 7px 16px;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .dl-btn:hover { background: var(--rose); color: #fff; }
+
+
     .project-desc {
       font-size: 16px;
       color: var(--muted);
@@ -218,11 +262,14 @@
       .project-block { padding: 48px 28px; }
       .section-label { padding: 18px 28px; }
       .pdf-slide iframe { height: 420px; }
+      .board-slide img { max-height: 460px; }
     }
 
     @media (max-width: 640px) {
       .project-block { padding: 36px 20px; }
       .pdf-slide iframe { height: 300px; }
+      .board-slide { padding: 8px; }
+      .board-slide img { max-height: 320px; }
     }
   </style>
 </head>
@@ -273,22 +320,26 @@
 
     <div class="pdf-swiper" id="swiper-1">
       <div class="pdf-slides" id="slides-1">
-        <div class="pdf-slide">
-          <iframe src="ARC391-Portfolio_Template.pdf#page=1" title="Twin Peaks page 1"></iframe>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p1.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p1.jpg" alt="Twin Peaks: Cerro Torre portfolio page 1"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p2.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p2.jpg" alt="Twin Peaks: Cerro Torre portfolio page 2" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p3.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p3.jpg" alt="Twin Peaks: Cerro Torre portfolio page 3" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p4.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p4.jpg" alt="Twin Peaks: Cerro Torre portfolio page 4" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p5.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p5.jpg" alt="Twin Peaks: Cerro Torre portfolio page 5" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p6.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p6.jpg" alt="Twin Peaks: Cerro Torre portfolio page 6" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p7.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p7.jpg" alt="Twin Peaks: Cerro Torre portfolio page 7" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p8.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p8.jpg" alt="Twin Peaks: Cerro Torre portfolio page 8" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p9.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p9.jpg" alt="Twin Peaks: Cerro Torre portfolio page 9" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p10.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p10.jpg" alt="Twin Peaks: Cerro Torre portfolio page 10" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p11.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p11.jpg" alt="Twin Peaks: Cerro Torre portfolio page 11" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p12.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p12.jpg" alt="Twin Peaks: Cerro Torre portfolio page 12" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p13.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p13.jpg" alt="Twin Peaks: Cerro Torre portfolio page 13" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p14.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p14.jpg" alt="Twin Peaks: Cerro Torre portfolio page 14" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p15.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p15.jpg" alt="Twin Peaks: Cerro Torre portfolio page 15" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p16.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p16.jpg" alt="Twin Peaks: Cerro Torre portfolio page 16" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p17.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p17.jpg" alt="Twin Peaks: Cerro Torre portfolio page 17" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p18.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p18.jpg" alt="Twin Peaks: Cerro Torre portfolio page 18" loading="lazy"></a></div>
+          <div class="pdf-slide board-slide"><a href="ARC391-Portfolio_Template-p19.jpg" target="_blank"><img src="ARC391-Portfolio_Template-p19.jpg" alt="Twin Peaks: Cerro Torre portfolio page 19" loading="lazy"></a></div>
         </div>
-        <div class="pdf-slide">
-          <iframe src="ARC391-Portfolio_Template.pdf#page=2" title="Twin Peaks page 2" loading="lazy"></iframe>
-        </div>
-        <div class="pdf-slide">
-          <iframe src="ARC391-Portfolio_Template.pdf#page=3" title="Twin Peaks page 3" loading="lazy"></iframe>
-        </div>
-        <div class="pdf-slide">
-          <iframe src="ARC391-Portfolio_Template.pdf#page=4" title="Twin Peaks page 4" loading="lazy"></iframe>
-        </div>
-        <div class="pdf-slide">
-          <iframe src="ARC391-Portfolio_Template.pdf#page=5" title="Twin Peaks page 5" loading="lazy"></iframe>
-        </div>
-      </div>
       <button class="swiper-btn prev" onclick="slide('swiper-1', -1)" id="prev-1">‹</button>
       <button class="swiper-btn next" onclick="slide('swiper-1', 1)" id="next-1">›</button>
     </div>
@@ -298,42 +349,53 @@
       <button class="swiper-dot" onclick="goTo('swiper-1', 2)"></button>
       <button class="swiper-dot" onclick="goTo('swiper-1', 3)"></button>
       <button class="swiper-dot" onclick="goTo('swiper-1', 4)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1', 5)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1', 6)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1', 7)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1', 8)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1', 9)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1', 10)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1', 11)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1', 12)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1', 13)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1', 14)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1', 15)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1', 16)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1', 17)"></button>
+      <button class="swiper-dot" onclick="goTo('swiper-1', 18)"></button>
     </div>
-    <div class="swiper-counter" id="counter-1">1 / 5</div>
+    <div class="swiper-counter" id="counter-1">1 / 19</div>
+    <div class="dl-row"><span>Click any page to open it full size</span><a class="dl-btn" href="ARC391-Portfolio_Template.pdf" target="_blank">Download PDF ↗</a></div>
   </div>
 
-  <!-- PROJECT 02 — House Husaro -->
+  <!-- PROJECT 02 — Tamedia (solo) -->
   <div class="project-block">
     <div class="project-meta-row">
       <span class="project-num">02 —</span>
       <div class="chips">
         <span class="chip chip-rose">Technical Drawing</span>
+        <span class="chip chip-lav">Climate Analysis</span>
         <span class="chip chip-neu">Building Systems</span>
       </div>
     </div>
-    <div class="project-title">House Husarö: <em>Wall Section Detail</em></div>
+    <div class="project-title">Tamedia Office Building: <em>Structure, Enclosure + Climate</em></div>
     <div class="project-subtitle">ARC 121 — Spring 2025</div>
     <div class="project-desc">
-      A technical section detail of the wall-floor-to-foundation connection of House Husarö, focusing on thermal and moisture performance in a cold Nordic climate. Documents continuous rigid insulation, vapor barriers, drainage mat, and CLT structural floor systems.
+      An individual study of Shigeru Ban's all-timber Tamedia headquarters in Zurich, analyzing how the enclosure works with the structure and the climate. Includes a section showing load distribution, wind flow, and summer and winter sun paths; solar studies for December 21 and June 21; and an exploded axonometric of the prefabricated glulam columns, beams, and floor slabs, assembled without steel connectors.
     </div>
 
     <div class="pdf-swiper" id="swiper-2">
       <div class="pdf-slides" id="slides-2">
-        <div class="pdf-slide">
-          <iframe src="25S-ARC121-01-P3-dccromer.pdf#page=1" title="House Husaro page 1"></iframe>
-        </div>
-        <div class="pdf-slide">
-          <iframe src="25S-ARC121-01-P3-dccromer.pdf#page=2" title="House Husaro page 2" loading="lazy"></iframe>
-        </div>
+          <div class="pdf-slide board-slide"><a href="25S-ARC121-01-P3-dccromer-p1.jpg" target="_blank"><img src="25S-ARC121-01-P3-dccromer-p1.jpg" alt="Tamedia Office Building individual analysis board"></a></div>
       </div>
       <button class="swiper-btn prev" onclick="slide('swiper-2', -1)" id="prev-2">‹</button>
       <button class="swiper-btn next" onclick="slide('swiper-2', 1)" id="next-2">›</button>
     </div>
     <div class="swiper-dots" id="dots-2">
       <button class="swiper-dot active" onclick="goTo('swiper-2', 0)"></button>
-      <button class="swiper-dot" onclick="goTo('swiper-2', 1)"></button>
     </div>
-    <div class="swiper-counter" id="counter-2">1 / 2</div>
+    <div class="swiper-counter" id="counter-2">1 / 1</div>
+    <div class="dl-row"><span>Click any image to open it full size</span><a class="dl-btn" href="25S-ARC121-01-P3-dccromer.pdf" target="_blank">Download PDF ↗</a></div>
   </div>
 
   <!-- COLLABORATIVE -->
@@ -342,7 +404,7 @@
     <span>team projects — individual contributions noted</span>
   </div>
 
-  <!-- PROJECT 03 — Tamedia -->
+  <!-- PROJECT 03 — Tamedia (group) -->
   <div class="project-block">
     <div class="project-meta-row">
       <span class="project-num">03 —</span>
@@ -350,22 +412,15 @@
     </div>
     <div class="project-title">Tamedia Office <em>Building</em></div>
     <div class="project-subtitle">ARC 121 — Spring 2025</div>
-    <div class="project-collab-note">My contributions: structural diagrams, exploded axonometric, sustainability analysis</div>
+    <div class="project-collab-note">My contributions: exploded axonometric diagram of the structural system (roof enclosure, glulam façade elements, primary frame, and floor slabs); contributed to the written analysis</div>
     <div class="project-desc">
-      Analysis of Shigeru Ban's 2013 all-timber headquarters in Zurich — assembled without metal fasteners using traditional Japanese joinery. Examines structural engineering, enclosure systems, load distribution, sun path integration, and carbon-neutral performance.
+      Analysis of Shigeru Ban's 2013 all-timber headquarters in Zurich, assembled without metal fasteners using traditional Japanese joinery. Examines structural engineering, enclosure systems, load distribution, and carbon-neutral performance.
     </div>
 
     <div class="pdf-swiper" id="swiper-3">
       <div class="pdf-slides" id="slides-3">
-        <div class="pdf-slide">
-          <iframe src="25S-ARC121-01-P2-Group44-dccromer.pdf#page=1" title="Tamedia page 1"></iframe>
-        </div>
-        <div class="pdf-slide">
-          <iframe src="25S-ARC121-01-P2-Group44-dccromer.pdf#page=2" title="Tamedia page 2" loading="lazy"></iframe>
-        </div>
-        <div class="pdf-slide">
-          <iframe src="Proj2.pdf#page=1" title="Tamedia axon" loading="lazy"></iframe>
-        </div>
+          <div class="pdf-slide board-slide"><a href="25S-ARC121-01-P2-Group44-dccromer-p1.jpg" target="_blank"><img src="25S-ARC121-01-P2-Group44-dccromer-p1.jpg" alt="Tamedia Office Building group analysis board"></a></div>
+          <div class="pdf-slide board-slide"><a href="tamedia-exploded-axon.jpg" target="_blank"><img src="tamedia-exploded-axon.jpg" alt="Exploded axonometric diagram of the Tamedia Office Building, drawn by Diamone Cromer" loading="lazy"></a></div>
       </div>
       <button class="swiper-btn prev" onclick="slide('swiper-3', -1)" id="prev-3">‹</button>
       <button class="swiper-btn next" onclick="slide('swiper-3', 1)" id="next-3">›</button>
@@ -373,9 +428,9 @@
     <div class="swiper-dots" id="dots-3">
       <button class="swiper-dot active" onclick="goTo('swiper-3', 0)"></button>
       <button class="swiper-dot" onclick="goTo('swiper-3', 1)"></button>
-      <button class="swiper-dot" onclick="goTo('swiper-3', 2)"></button>
     </div>
-    <div class="swiper-counter" id="counter-3">1 / 3</div>
+    <div class="swiper-counter" id="counter-3">1 / 2</div>
+    <div class="dl-row"><span>Click any image to open it full size</span><a class="dl-btn" href="25S-ARC121-01-P2-Group44-dccromer.pdf" target="_blank">Download PDF ↗</a></div>
   </div>
 
   <!-- PROJECT 04 — Haus Gables -->
@@ -386,19 +441,15 @@
     </div>
     <div class="project-title">Haus Gables: <em>Climate Analysis</em></div>
     <div class="project-subtitle">ARC 121 — Spring 2024</div>
-    <div class="project-collab-note">My contributions: climate strategy diagrams, passive ventilation analysis</div>
+    <div class="project-collab-note">My contributions: hand-drawn climate studies (June sun exposure and surface temperatures, January sun position and heat retention, and existing vs. improved design for shading, ventilation, and cooling); contributed to the written analysis</div>
     <div class="project-desc">
-      Climate-responsive analysis of Jennifer Bonner's Haus Gables in Atlanta — examining sun exposure, wind patterns, thermal mass, and passive cooling strategies for a humid subtropical climate. Proposes design improvements including movable louvers, operable windows, and enhanced shading.
+      Climate-responsive analysis of Jennifer Bonner's Haus Gables in Atlanta, examining sun exposure, wind patterns, thermal mass, and passive cooling strategies for a humid subtropical climate. Proposes design improvements including movable louvers, operable windows, and enhanced shading.
     </div>
 
     <div class="pdf-swiper" id="swiper-4">
       <div class="pdf-slides" id="slides-4">
-        <div class="pdf-slide">
-          <iframe src="25S-ARC121-01-P1-Group47-dccromer.pdf#page=1" title="Haus Gables page 1"></iframe>
-        </div>
-        <div class="pdf-slide">
-          <iframe src="25S-ARC121-01-P1-Group47-dccromer.pdf#page=2" title="Haus Gables page 2" loading="lazy"></iframe>
-        </div>
+          <div class="pdf-slide board-slide"><a href="25S-ARC121-01-P1-Group47-dccromer-p1.jpg" target="_blank"><img src="25S-ARC121-01-P1-Group47-dccromer-p1.jpg" alt="Haus Gables group climate analysis board"></a></div>
+          <div class="pdf-slide board-slide"><a href="haus-gables-climate-sketches.jpg" target="_blank"><img src="haus-gables-climate-sketches.jpg" alt="Hand-drawn climate studies of Haus Gables by Diamone Cromer" loading="lazy"></a></div>
       </div>
       <button class="swiper-btn prev" onclick="slide('swiper-4', -1)" id="prev-4">‹</button>
       <button class="swiper-btn next" onclick="slide('swiper-4', 1)" id="next-4">›</button>
@@ -408,6 +459,7 @@
       <button class="swiper-dot" onclick="goTo('swiper-4', 1)"></button>
     </div>
     <div class="swiper-counter" id="counter-4">1 / 2</div>
+    <div class="dl-row"><span>Click any image to open it full size</span><a class="dl-btn" href="25S-ARC121-01-P1-Group47-dccromer.pdf" target="_blank">Download PDF ↗</a></div>
   </div>
 
   <footer>
@@ -441,6 +493,14 @@
       // buttons
       document.getElementById(`prev-${num}`).disabled = cur === 0;
       document.getElementById(`next-${num}`).disabled = cur === total - 1;
+
+      // hide controls when there's only one image
+      if (total <= 1) {
+        document.getElementById(`prev-${num}`).style.display = 'none';
+        document.getElementById(`next-${num}`).style.display = 'none';
+        document.getElementById(`dots-${num}`).style.display = 'none';
+        document.getElementById(`counter-${num}`).style.display = 'none';
+      }
     }
 
     function slide(id, dir) {
