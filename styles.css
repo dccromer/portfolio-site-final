@@ -25,7 +25,7 @@ body {
   background: var(--white);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -45,7 +45,7 @@ nav {
 
 .logo {
   font-family: var(--serif);
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 600;
   color: var(--ink);
   letter-spacing: 0.01em;
@@ -63,7 +63,7 @@ nav {
 }
 
 .nav-links a {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -94,7 +94,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
@@ -122,7 +122,7 @@ nav {
 .hero-h1 .c-lav  { color: var(--lav); font-style: italic; }
 
 .hero-sub {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--muted);
   line-height: 1.8;
@@ -136,7 +136,7 @@ nav {
 
 .btn-primary {
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -152,7 +152,7 @@ nav {
 
 .btn-ghost {
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -185,7 +185,7 @@ nav {
 .stat-num sup { font-size: 18px; color: var(--rose); }
 
 .stat-label {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   letter-spacing: 0.05em;
 }
@@ -212,7 +212,7 @@ nav {
 }
 
 .feat-label {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--rose);
@@ -222,13 +222,13 @@ nav {
 
 .feat-title {
   font-family: var(--serif);
-  font-size: 15px;
+  font-size: 16px;
   font-style: italic;
   color: var(--ink);
 }
 
 .feat-tag {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 6px 14px;
@@ -249,7 +249,7 @@ nav {
 }
 
 .col-h {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--lav);
@@ -282,7 +282,7 @@ nav {
 
 .row-title {
   font-family: var(--serif);
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 300;
   line-height: 1.15;
   margin-bottom: 5px;
@@ -291,7 +291,7 @@ nav {
 .row-title em { font-style: italic; font-weight: 600; color: var(--rose); }
 
 .row-desc {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--muted);
   font-weight: 400;
 }
@@ -299,7 +299,7 @@ nav {
 .chips { display: flex; gap: 7px; flex-wrap: wrap; }
 
 .chip {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 5px 12px;
@@ -312,7 +312,7 @@ nav {
 .chip-neu  { background: #ede8eb; color: var(--muted); border: 1.5px solid rgba(92,82,101,0.2); }
 
 .row-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
-.row-year  { font-size: 12px; color: var(--muted); font-weight: 400; }
+.row-year  { font-size: 13px; color: var(--muted); font-weight: 400; }
 .row-arrow {
   font-size: 18px;
   color: var(--rose);
@@ -336,7 +336,7 @@ nav {
 }
 
 .about-section-label {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   margin-bottom: 32px;
@@ -356,7 +356,7 @@ nav {
 .about-headline em { font-style: italic; color: #e8a0be; }
 
 .about-body {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.85;
   color: rgba(253,248,246,0.85);
@@ -378,14 +378,14 @@ nav {
 
 .exp-title {
   font-family: var(--serif);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 2px;
   color: var(--ink);
 }
 
-.exp-where { font-size: 13px; color: var(--muted); font-weight: 400; }
-.exp-when  { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.exp-where { font-size: 14px; color: var(--muted); font-weight: 400; }
+.exp-when  { font-size: 13px; color: var(--muted); margin-top: 2px; }
 
 /* ── CTA / CONTACT ── */
 .cta-bar {
@@ -407,14 +407,14 @@ nav {
 .cta-r { display: flex; flex-direction: column; align-items: flex-end; gap: 14px; }
 
 .cta-email {
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255,255,255,0.85);
   letter-spacing: 0.03em;
 }
 
 .cta-btn {
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -434,7 +434,7 @@ footer {
   justify-content: space-between;
   padding: 20px 56px;
   background: var(--ink);
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.07em;
   color: rgba(253,248,246,0.6);
 }
@@ -470,7 +470,7 @@ footer {
 @media (max-width: 640px) {
   nav { padding: 16px 20px; }
   .nav-links { gap: 14px; }
-  .nav-links a { font-size: 11px; }
+  .nav-links a { font-size: 12px; }
   .hero-l { padding: 40px 20px; }
   .works-header { display: none; }
   .work-row { grid-template-columns: 40px 1fr; padding: 20px; gap: 12px; }
