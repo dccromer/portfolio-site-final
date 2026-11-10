@@ -200,13 +200,20 @@
       margin-bottom: 40px;
     }
     .field-grid figure { margin: 0; }
+    .field-grid figcaption { padding: 0 2px; }
+    .field-grid figure {
+      background: #fff;
+      padding: 10px 10px 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 10px rgba(30,22,40,0.06);
+      transition: transform 0.2s;
+    }
+    .field-grid figure:hover { transform: translateY(-3px); }
     .field-grid img {
       width: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
       display: block;
-      border: 1px solid var(--border);
-      border-radius: 2px;
     }
     .field-grid figcaption {
       font-size: 14px;
@@ -392,27 +399,27 @@
     <div class="field-label">In the Field</div>
     <div class="field-grid">
       <figure>
-        <img src="research-heating-unit.jpg" alt="Heating unit in a monitored dorm room" loading="lazy">
+        <img src="6.jpg" alt="Heating unit in a monitored dorm room" loading="lazy">
         <figcaption>Heating unit in a monitored unit</figcaption>
       </figure>
       <figure>
-        <img src="research-thermostat.jpg" alt="Smart thermostat reading indoor temperature" loading="lazy">
+        <img src="2.jpg" alt="Smart thermostat reading indoor temperature" loading="lazy">
         <figcaption>Smart thermostat logging indoor temperature</figcaption>
       </figure>
       <figure>
-        <img src="research-air-sensor.jpg" alt="Indoor environment sensor showing CO2, temperature, and humidity" loading="lazy">
+        <img src="3.jpg" alt="Indoor environment sensor showing CO2, temperature, and humidity" loading="lazy">
         <figcaption>Indoor sensor: CO₂, temperature, humidity</figcaption>
       </figure>
       <figure>
-        <img src="research-occupancy-sensor.jpg" alt="Occupancy sensor mounted near the door" loading="lazy">
+        <img src="5.jpg" alt="Occupancy sensor mounted near the door" loading="lazy">
         <figcaption>Occupancy sensor at the entry</figcaption>
       </figure>
       <figure>
-        <img src="research-window-sensors.jpg" alt="Contact sensors on windows" loading="lazy">
+        <img src="4.jpg" alt="Contact sensors on windows" loading="lazy">
         <figcaption>Window contact sensors</figcaption>
       </figure>
       <figure>
-        <img src="research-outdoor-station.jpg" alt="Monitoring equipment on the building exterior" loading="lazy">
+        <img src="1.jpg" alt="Monitoring equipment on the building exterior" loading="lazy">
         <figcaption>Exterior monitoring equipment</figcaption>
       </figure>
     </div>
@@ -428,18 +435,10 @@
 
       <div class="pdf-swiper" id="swiper-2">
         <div class="pdf-slides" id="slides-2">
-          <div class="pdf-slide">
-            <div class="mag-spread">
-              <img src="magazine-p10.jpg" alt="Syracuse University Magazine page 10: Retrofitting for the Future">
-              <img src="magazine-p11.jpg" alt="Syracuse University Magazine page 11: project team photo including Diamone Cromer">
-            </div>
-          </div>
-          <div class="pdf-slide">
-            <div class="mag-spread">
-              <img src="magazine-p12.jpg" alt="Syracuse University Magazine page 12" loading="lazy">
-              <img src="magazine-p13.jpg" alt="Syracuse University Magazine page 13" loading="lazy">
-            </div>
-          </div>
+          <div class="pdf-slide"><iframe src="SustainableSouthCampus.pdf#page=1" title="Syracuse University Magazine page 10"></iframe></div>
+          <div class="pdf-slide"><iframe src="SustainableSouthCampus.pdf#page=2" title="Syracuse University Magazine page 11" loading="lazy"></iframe></div>
+          <div class="pdf-slide"><iframe src="SustainableSouthCampus.pdf#page=3" title="Syracuse University Magazine page 12" loading="lazy"></iframe></div>
+          <div class="pdf-slide"><iframe src="SustainableSouthCampus.pdf#page=4" title="Syracuse University Magazine page 13" loading="lazy"></iframe></div>
         </div>
         <button class="swiper-btn prev" onclick="slide('swiper-2',-1)" id="prev-2">‹</button>
         <button class="swiper-btn next" onclick="slide('swiper-2', 1)" id="next-2">›</button>
@@ -447,11 +446,13 @@
       <div class="swiper-dots" id="dots-2">
         <button class="swiper-dot active" onclick="goTo('swiper-2',0)"></button>
         <button class="swiper-dot" onclick="goTo('swiper-2',1)"></button>
+        <button class="swiper-dot" onclick="goTo('swiper-2',2)"></button>
+        <button class="swiper-dot" onclick="goTo('swiper-2',3)"></button>
       </div>
-      <div class="swiper-counter" id="counter-2">1 / 2</div>
+      <div class="swiper-counter" id="counter-2">1 / 4</div>
       <div class="press-links">
         <a class="download-link" href="https://www.syracuse.edu/stories/south-campus-retrofit/" target="_blank">Read online ↗</a>
-        <a class="download-link" href="syracuse-magazine-fall2025.pdf" target="_blank">Download PDF ↗</a>
+        <a class="download-link" href="SustainableSouthCampus.pdf" target="_blank">Download PDF ↗</a>
       </div>
       <div class="press-credit">Pages courtesy of Syracuse University Magazine, Fall 2025. Article by Jay Cox.</div>
     </div>
