@@ -184,6 +184,141 @@
     }
     .download-link:hover { background: var(--lav); color: #fff; }
 
+    /* ── FIELD PHOTOS ── */
+    .field-label {
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--lav);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .field-grid figure { margin: 0; }
+    .field-grid img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+    }
+    .field-grid figcaption {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+    @media (max-width: 640px) {
+      .field-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    }
+
+    /* ── PRESS BANNER ── */
+    .press-banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: var(--lav-bg);
+      border: 1px solid rgba(107,94,170,0.3);
+      border-radius: 2px;
+      padding: 14px 20px;
+      margin-bottom: 32px;
+      text-decoration: none;
+      color: var(--lav);
+      font-size: 15px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .press-banner:hover { background: #e6ddf4; }
+    .press-banner span {
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ── KEY FINDINGS ── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+      max-width: 900px;
+    }
+    .stat-box {
+      background: var(--lav-bg);
+      padding: 20px;
+      border-radius: 2px;
+    }
+    .stat-box .big {
+      font-family: var(--serif);
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 1;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .stat-box .small {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    /* ── IN THE PRESS ── */
+    .press-section { scroll-margin-top: 90px; margin-bottom: 48px; }
+    .press-title {
+      font-family: var(--serif);
+      font-size: clamp(24px, 2.6vw, 32px);
+      font-weight: 300;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .press-title em { font-style: italic; color: var(--lav); font-weight: 600; }
+    .press-meta { font-size: 15px; color: var(--muted); margin-bottom: 16px; }
+    .press-quote {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--ink);
+      border-left: 3px solid var(--rose);
+      padding-left: 18px;
+      margin-bottom: 24px;
+      max-width: 680px;
+      line-height: 1.5;
+    }
+    .press-quote cite {
+      display: block;
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+    .mag-spread {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: #f8f6f0;
+    }
+    .mag-spread img { width: 100%; height: auto; display: block; }
+    .press-links { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 4px; }
+    .press-credit { font-size: 12px; color: var(--muted); margin-top: 14px; }
+
+    @media (max-width: 1024px) {
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .mag-spread { grid-template-columns: 1fr; }
+      .stat-box .big { font-size: 32px; }
+    }
+
     /* placeholder */
     .coming-soon {
       padding: 64px 56px;
@@ -240,11 +375,88 @@
       </div>
     </div>
     <div class="project-title">Detecting HVAC Underperformance in Residential <em>Buildings</em></div>
-    <div class="project-subtitle">The SOURCE at Syracuse University — Spring 2026</div>
+    <div class="project-subtitle">The SOURCE at Syracuse University · Sustainable South Campus — Spring 2026</div>
+
+    <a class="press-banner" href="#press">Featured in Syracuse University Magazine, Fall 2025 <span>See the feature ↓</span></a>
+
+    <div class="stats-row">
+      <div class="stat-box"><div class="big">8.6%</div><div class="small">Heating issue rate in Unit A-8</div></div>
+      <div class="stat-box"><div class="big">3.6%</div><div class="small">Unit A-7, same building and heating system</div></div>
+      <div class="stat-box"><div class="big">2.4×</div><div class="small">Performance gap between the two units</div></div>
+      <div class="stat-box"><div class="big">3</div><div class="small">Condition flagging system built in Python / pandas</div></div>
+    </div>
     <div class="project-desc">
       This study examines whether existing building sensor data can detect poor heating performance before residents file complaints. Using indoor temperature, occupancy, and outdoor weather data from two Syracuse University dormitory units, a three-condition flagging system identified heating issues — revealing that Unit A-8 had a heating issue rate of 8.6% compared to 3.6% in Unit A-7, despite sharing the same building and heating system.
     </div>
 
+    <div class="field-label">In the Field</div>
+    <div class="field-grid">
+      <figure>
+        <img src="research-heating-unit.jpg" alt="Heating unit in a monitored dorm room" loading="lazy">
+        <figcaption>Heating unit in a monitored unit</figcaption>
+      </figure>
+      <figure>
+        <img src="research-thermostat.jpg" alt="Smart thermostat reading indoor temperature" loading="lazy">
+        <figcaption>Smart thermostat logging indoor temperature</figcaption>
+      </figure>
+      <figure>
+        <img src="research-air-sensor.jpg" alt="Indoor environment sensor showing CO2, temperature, and humidity" loading="lazy">
+        <figcaption>Indoor sensor: CO₂, temperature, humidity</figcaption>
+      </figure>
+      <figure>
+        <img src="research-occupancy-sensor.jpg" alt="Occupancy sensor mounted near the door" loading="lazy">
+        <figcaption>Occupancy sensor at the entry</figcaption>
+      </figure>
+      <figure>
+        <img src="research-window-sensors.jpg" alt="Contact sensors on windows" loading="lazy">
+        <figcaption>Window contact sensors</figcaption>
+      </figure>
+      <figure>
+        <img src="research-outdoor-station.jpg" alt="Monitoring equipment on the building exterior" loading="lazy">
+        <figcaption>Exterior monitoring equipment</figcaption>
+      </figure>
+    </div>
+
+    <div class="press-section" id="press">
+      <div class="field-label">In the Press</div>
+      <div class="press-title">Retrofitting for the <em>Future</em></div>
+      <div class="press-meta">Syracuse University Magazine · Fall 2025 · pp. 10–13</div>
+      <div class="press-quote">
+        &ldquo;[The project] connects data, sensors and real building systems in a way that matters.&rdquo;
+        <cite>— Diamone Cromer &rsquo;28, quoted in the article</cite>
+      </div>
+
+      <div class="pdf-swiper" id="swiper-2">
+        <div class="pdf-slides" id="slides-2">
+          <div class="pdf-slide">
+            <div class="mag-spread">
+              <img src="magazine-p10.jpg" alt="Syracuse University Magazine page 10: Retrofitting for the Future">
+              <img src="magazine-p11.jpg" alt="Syracuse University Magazine page 11: project team photo including Diamone Cromer">
+            </div>
+          </div>
+          <div class="pdf-slide">
+            <div class="mag-spread">
+              <img src="magazine-p12.jpg" alt="Syracuse University Magazine page 12" loading="lazy">
+              <img src="magazine-p13.jpg" alt="Syracuse University Magazine page 13" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <button class="swiper-btn prev" onclick="slide('swiper-2',-1)" id="prev-2">‹</button>
+        <button class="swiper-btn next" onclick="slide('swiper-2', 1)" id="next-2">›</button>
+      </div>
+      <div class="swiper-dots" id="dots-2">
+        <button class="swiper-dot active" onclick="goTo('swiper-2',0)"></button>
+        <button class="swiper-dot" onclick="goTo('swiper-2',1)"></button>
+      </div>
+      <div class="swiper-counter" id="counter-2">1 / 2</div>
+      <div class="press-links">
+        <a class="download-link" href="https://www.syracuse.edu/stories/south-campus-retrofit/" target="_blank">Read online ↗</a>
+        <a class="download-link" href="syracuse-magazine-fall2025.pdf" target="_blank">Download PDF ↗</a>
+      </div>
+      <div class="press-credit">Pages courtesy of Syracuse University Magazine, Fall 2025. Article by Jay Cox.</div>
+    </div>
+
+    <div class="field-label">Full Research Paper</div>
     <div class="pdf-swiper" id="swiper-1">
       <div class="pdf-slides" id="slides-1">
         <div class="pdf-slide"><iframe src="hvac-research.pdf#page=1" title="HVAC Research page 1"></iframe></div>
@@ -321,7 +533,7 @@
       });
     });
 
-    ['swiper-1'].forEach(id => { state[id] = 0; update(id); });
+    ['swiper-1','swiper-2'].forEach(id => { state[id] = 0; update(id); });
   </script>
 
 </body>
